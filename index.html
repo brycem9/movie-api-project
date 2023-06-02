@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://kit.fontawesome.com/aaa3ef253a.js" crossorigin="anonymous"></script>
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <section id="navandheader">
+      <div class="row">
+        <nav>
+          <figure>
+            <a href=""><img src="./cineonogo.png" class="nav__logo" alt=""/></a>
+          </figure>
+          <ul class="nav__links">
+            <li class="nav__link">
+              <a href="">Home</a>
+            </li>
+            <li class="nav__link">
+              <a href="">Movies</a>
+            </li>
+            <li class="nav__link">
+              <a href="">Subscription</a>
+            </li>
+            <li class="nav__link">
+              <a href="" class="link__primary">Login</a>
+            </li>
+          </ul>
+          <i class="fa-solid fa-bars"></i>
+        </nav>
+        <div class="container">
+          <div class="header__wrapper">
+            <h1 class="browse__header">Browse your favorite titles</h1>
+              <div class="input__wrap">
+                <input type="text" placeholder="Dive into cinematic bliss" onchange="onSearchChange(event)">
+                  <div class="search__wrap">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="features">
+      <div class="container">
+        <div class="row">
+          <div class="feature__header--wrapper">
+            <h1 onclick="renderResult(event)">Features</h1>
+          </div>
+          <div class="filter__wrapper">
+            <select class="filtinput" id="filter" onchange="filterMovies(event)">
+              <option class="filter__option"value="" disabled selected>Sort</option>
+              <option class="filter__option" value="NEW_TO_OLD">Year, newest to oldest</option>
+              <option class="filter__option" value="OLD_TO_NEW">Year, oldest to newest</option>
+            </select>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </div>
+          <div class="movies">
+            <div class="movie">
+              <figure class="poster__img--wrapper">
+                <img src="https://m.media-amazon.com/images/M/MV5BNDMwNjAzNzYwOF5BMl5BanBnXkFtZTcwMDY5NzcyMw@@._V1_SX300.jpg" class="poster__img" alt="">
+              </figure>
+              <div class="book__title">
+              <p>The Twilight Saga: Eclipse <span class="movie__year">(2010)</span></p>
+              </div>
+            </div>
+            <div class="movie">
+              <figure class="poster__img--wrapper">
+                <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_SX300.jpg" class="poster__img" alt="">
+              </figure>
+              <div class="title__container">
+              <p>Avatar: The Way of Water  <span class="movie__year">(2022)</span></p>
+              </div>
+            </div>
+            <div class="movie">
+              <figure class="poster__img--wrapper">
+                <img src="https://m.media-amazon.com/images/M/MV5BNWExMzg3NjAtZmZmYy00MWE3LWJkNjEtOTYzYTZjYTZkMjZiXkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_SX300.jpg" class="poster__img" alt="">
+              </figure>
+              <div class="title__container">
+              <p>Missing <span class="movie__year">(2023)</span></p>
+              </div>
+            </div>
+            <div class="movie">
+              <figure class="poster__img--wrapper">
+                <img src="https://m.media-amazon.com/images/M/MV5BMTUxNzc0OTIxMV5BMl5BanBnXkFtZTgwNDI3NzU2NDE@._V1_SX300.jpg" class="poster__img machina" alt="">
+              </figure>
+              <div class="title__container">
+              <p>Ex Machina <span class="movie__year">(2014)</span> </p>
+              </div>
+            </div>
+            <div class="movie">
+              <figure class="poster__img--wrapper">
+                <img src="https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_SX300.jpg" class="poster__img" alt="">
+              </figure>
+              <div class="title__container">
+              <p>Blade Runner 2049 <span class="movie__year">(2017)</span></p>
+              </div>
+            </div>
+            <div class="movie">
+              <figure class="poster__img--wrapper">
+                <img src="https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg" class="poster__img" alt="">
+              </figure>
+              <div class="title__container">
+              <p>Interstellar  <span class="movie__year">(2014)</span></p>
+              </div>
+            </div>
+            <div class="movie">
+              <figure class="poster__img--wrapper">
+                <img src="https://m.media-amazon.com/images/M/MV5BNTljZTUzYWUtOTI4YS00NmZlLWE5MmQtZjFlZDZhNjg4MjQxXkEyXkFqcGdeQXVyNTc1NTQxODI@._V1_SX300.jpg" class="poster__img" alt="">
+              </figure>
+              <div class="title__container">
+              <p >The Beach <span class="movie__year">(2000)</span>
+              </div>
+            </div>
+            <div class="movie">
+              <figure class="poster__img--wrapper">
+                <img src="https://m.media-amazon.com/images/M/MV5BNzY2NzI4OTE5MF5BMl5BanBnXkFtZTcwMjMyNDY4Mw@@._V1_SX300.jpg" class="poster__img machina" alt="">
+              </figure>
+              <div class="title__container">
+              <p>Black Swan  <span class="movie__year">(2010)</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
